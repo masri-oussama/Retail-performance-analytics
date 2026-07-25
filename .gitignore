@@ -3,3 +3,6 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 .DS_Store
+# Raw and processed datasets
+data/raw/*
+data/processed/*
