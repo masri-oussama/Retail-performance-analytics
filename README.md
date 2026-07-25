@@ -25,3 +25,13 @@ The project will combine:
 - SQL for business analysis
 - Streamlit for an interactive dashboard
 - Git and GitHub for version control and documentation
+
+## Data-cleaning decisions
+
+- Exact duplicate rows were removed to avoid double-counting.
+- Missing customer IDs were retained because the rows remain useful for sales analysis.
+- Missing product descriptions were replaced with `Unknown product`.
+- Rows with invalid dates, quantities or prices were stored separately.
+- Zero and negative prices were excluded from the main analytical dataset.
+- Negative quantities were retained because they may represent cancellations or returns.
+- Cancellations were identified using invoice numbers beginning with `C`.
