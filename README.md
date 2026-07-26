@@ -35,3 +35,22 @@ The project will combine:
 - Zero and negative prices were excluded from the main analytical dataset.
 - Negative quantities were retained because they may represent cancellations or returns.
 - Cancellations were identified using invoice numbers beginning with `C`.
+
+## SQL analysis
+
+The cleaned transactional data is loaded into a local SQLite database.
+
+The SQL analysis includes:
+
+- total revenue and average order value;
+- monthly performance;
+- top products;
+- customer value;
+- repeat-customer analysis;
+- country performance;
+- cancellations;
+- month-over-month growth.
+
+The main SQL queries are available in:
+
+`sql/business_queries.sql`
