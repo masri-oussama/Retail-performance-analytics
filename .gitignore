@@ -1,8 +1,26 @@
+# Virtual environment
 .venv/
+
+# Python cache
 __pycache__/
+*.py[cod]
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Environment variables
 .env
+
+# macOS
 .DS_Store
-# Raw and processed datasets
+
+# Ignore raw and generated processed data
 data/raw/*
 data/processed/*
+
+# Keep README files inside ignored data folders
+!data/raw/README.md
+!data/processed/README.md
+
+# Allow the compressed dataset used by Streamlit
+!data/dashboard_transactions.csv.gz
