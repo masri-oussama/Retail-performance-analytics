@@ -24,3 +24,14 @@ data/processed/*
 
 # Allow the compressed dataset used by Streamlit
 !data/dashboard_transactions.csv.gz
+
+# Local AI/editor configuration
+.agents/
+.claude/
+
+# Python and test caches
+__pycache__/
+.pytest_cache/
+
+# macOS
+.DS_Store
