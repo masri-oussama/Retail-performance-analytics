@@ -1,8 +1,16 @@
 from pathlib import Path
+import sys
 
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 
 from src.analysis import (
     calculate_kpis,
@@ -13,9 +21,7 @@ from src.analysis import (
 )
 
 
-DATA_PATH = Path(
-    "data/dashboard_transactions.csv.gz"
-)
+DATA_PATH = PROJECT_ROOT / "data" / "dashboard_transactions.csv.gz"
 
 
 # --------------------------------------------------
